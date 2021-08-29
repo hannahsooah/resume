@@ -14,7 +14,7 @@ $(OBJ): $(SRC)
 	@docker run --rm --name latex \
 		-v $(CURDIR):/tmp/ \
 		-w /tmp/ \
-		hannahsooah/resume \
+		aeolyus/resume-latex \
 		latexmk -xelatex -pvc -view=none -output-directory=$(SRCDIR) $(SRC)
 
 clean: ## Clean up the repo

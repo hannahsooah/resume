@@ -13,13 +13,11 @@
 
 \setmainfont{Poppins}
 \pagenumbering{gobble}
-\linespread{1.1}
+\linespread{1.25}
 
-\definecolor{titlecolor}{RGB}{164,135,102} % #a48766
+\definecolor{titlecolor}{RGB}{56,140,236} % #388cec
 \sectionfont{\color{titlecolor}}
 
-\definecolor{subtitlecolor}{RGB}{76,63,56} % #4c3f38
-\subsectionfont{\color{subtitlecolor}}
 
 \titlespacing*{\section}{0pt}{5pt}{2pt}
 \titlespacing*{\subsection}{0pt}{3pt}{0pt}
@@ -27,7 +25,7 @@
 \titleformat{\section}
 {\bfseries\color{titlecolor}\large}{}{0em}{}
 \titleformat{\subsection}[runin]
-{\bfseries\color{subtitlecolor}}{}{0em}{}
+{\bfseries}{}{0em}{}
 
 \setlist{leftmargin=1.5em}
 \renewcommand\labelitemi{-}
@@ -42,109 +40,97 @@
     \Huge\bfseries\theauthor
   \end{flushleft}
   \begin{bfseries}
-    \faEmail    \hspace{1pt} \href{mailto:richardh@berkeley.edu}{richardh@berkeley.edu} \quad
-    \faPhone    \hspace{1pt} (408) 888-6082 \quad
-    \faLinkedin \hspace{1pt} \link{linkedin.com/in/aeolyus} \quad
-    \faGithub   \hspace{1pt} \link{github.com/aeolyus}
+    \faEmail    \hspace{1pt} \href{mailto:hannahso@berkeley.edu}{hannahso@berkeley.edu} \quad
+    \faPhone    \hspace{1pt} (408) 593-7698 \quad
+    \faLinkedin \hspace{1pt} \href{https://www.linkedin.com/in/hannahso}{hannahso} \quad
+    \faGithub   \hspace{1pt} \href{https://github.com/hannahsooah/}{hannahsooah}
   \end{bfseries}
 }
 
 
 \begin{document}
-\author{\color{titlecolor}Richard Huang}
+\author{\color{titlecolor}Hannah S. Oh}
 \maketitle
 
 
 \section{Education}
 \subsection{University of California, Berkeley}
-\entry{Computer Science BA}{Aug 2018 - Dec 2020}{3.84 GPA}\\
-Extracurricular:
-  Upsilon Pi Epsilon (UPE) Computer Science Honor Society,
-  Open Computing Facility (OCF) Staff\\
+\entry{Electrical Engineering and Computer Science, BS}{Aug 2020 - May 2023}\\
 Coursework:
   Algorithms,
   Data Structures,
   Machine Structures,
-  Operating Systems,
   Database Systems,
-  Networking,
-  Security,
-  AI, Discrete Math,
-  Probability Theory
+  AI, 
+  Linux SysAdmin DeCal,
+  Discrete Mathematics,
+  Designing Information Devices and Systems
 
 
 \section{Experience}
 
 \subsection{Production Engineer Intern}
-\entry{Facebook}{Jun 2020 - Aug 2020}{Menlo Park, CA}
+\entry{Facebook}{Jun 2021 - Aug 2021}{Menlo Park, CA (Remote)}
 \begin{itemize}
-  \item Built a stream processing pipeline test framework with a new Python -> IR Language -> Stylus C++ stack
-  \item Implemented Python -> C++ compiler for complex and native static expressions for new pipeline stack
-  \item Fixed a 3 month issue with TestSlide on migrating the codebase to a newer version
+  \item Implemented relative computing resource units for future use in server inventory management systems
+  \item Refactored scheduler to be cross-compatible with capacity requests of different resource types
+  \item Created alerts and detectors to monitor invalid resource configurations
 \end{itemize}
 
-\subsection{Software Engineer Intern}
-\entry{8th Wall}{May 2019 - Aug 2019}{Palo Alto, CA}
+\subsection{Academic Course Staff}
+\entry{UC Berkeley EECS Department}{Jan 2021 - Current}{Berkeley, CA}
 \begin{itemize}
-  \item Constructed new sign up flow for new console account system using
-    React, Redux, Express, AWS Cognito
-  \item Programmed contract automation using Javascript, PostgreSQL, Stripe
-  \item Automated application billing and upgrading
-\end{itemize}
-
-\subsection{Linux System Administrator ISG}
-\entry{UC Berkeley}{Oct 2018 - Jan 2020}{Berkeley, CA}
-\begin{itemize}
-  \item Mass deployed a custom Unix OS onto hive of 100+ computers in Berkeley labs
-  \item Prevented storage overload bug that would have caused system-wide crash
-  \item Hosted and ran annual ACM International Collegiate Programming Contest
+  \item Reinforce student knowledge of circuit analysis, signals, and controls as a member of course staff
+  \item Staff weekly reviews for students; focus on conceptual application through projects, homework, and labs
 \end{itemize}
 
 
 \section{Projects}
 
-\subsection{Homelab}
-\entry{\link{aeoly.us/s/homelab}}{Neverending}{Golang, Docker, Ansible}
+\subsection{NumC}\quad{April 2021}
 \begin{itemize}
-  \item Wrote a modular machine-agnostic script that sets up my homelab infrastructure with a single command
-  \item Self-hosted web server, media server, DNS sinkhole, password manager, file-hosting, monitoring system, Minecraft server, virtualization hypervisor
-  \item Shortlinks powered by \link{gull.ml}, my simple modern URL shortener written in Go
+  \item Developed a Python array-processing API written in C mimicking NumPy functionalities
+  \item Implemented multi-threading, SIMD, loop unrolling, and blocking to optimize matrix arithmetic
+  \item Achieved 90x speedup for matrix multiplication and 1000x speedup for matrix powering
 \end{itemize}
 
-\subsection{Alexa Skills Developer}
-\entry{}{Dec 2017}{Node.js, AWS, Lambda}
+\subsection{Gitlet}\quad{March 2021}
 \begin{itemize}
-  \item Developed 11 Alexa skills using Node.js and AWS Lambda with 7000+ unique users
-  \item Tells users interesting random facts about the topic asked
+  \item Built a custom version control system in Java from scratch, mimicking git
+  \item Wrote a breadth-first search algorithm to detect split points in commit history for correct branch merging
+  \item Functionality includes init, add, commit, rm, log, global-log, find, status, checkout, branch, merge, reset, etc.
 \end{itemize}
 
-\subsection{Cougle}
-\entry{\link{cougle.ml}}{Feb 2018}{PHP, HTML, CSS, Linux}
+\subsection{Classify}\quad{Feb 2021}
 \begin{itemize}
-  \item Created an online anonymous peer-counseling forum with 300+ users to assist
-    students in a high school with a 4:3000+ counselor to student ratio
-  \item Demonstrated to and inspired school district board members to create an
-    advice forum at our school
+  \item Wrote RISC-V assembly code to run a simple Artificial Neural Network (ANN) on a RISC-V simulator
+  \item Implemented basic operations including vector dot product and matrix multiplication using assembly code
+  \item Loaded a pretrained ANN and executed it to classify handwritten digits from the MNIST benchmark set
 \end{itemize}
 
-\subsection{EVSD Web App}
-\entry{\link{evsd.club}}{May 2016 - May 2018}{Meteor.js, MongoDB, Linux}
+\subsection{Lisp Dialect Interpreter}\quad{Nov 2020}
 \begin{itemize}
-  \item Developed a web app that handles all logistics, 400+ users, member balances,
-    \$60k+year, tournaments
-  \item Responsible for server upkeep, configuration, and reliable operation
+  \item Wrote a recursive interpreter and tokenizer for a List dialect using Python
+  \item Created the REPL to evaluate expressions and implemented tail recursion to optimize recursion
 \end{itemize}
 
+\subsection{Autocorrected Typing Software}\quad{Sept 2020}
+\begin{itemize}
+  \item Measures typing speed and accuracy and has autocorrect feature to correct user spelling mistakes 
+  \item Added multiplayer compatibilities to race friends and professors
+\end{itemize}
+
+\section{Awards}
+{Presidential Scholars Program Nominee, Jan 2020}\quad\quad{National Merit Scholarship, Feb 2020} \\
+{The President’s Volunteer Service Award, Nov 2019}\quad\quad{FUHSD Community Service Award, May 2020}
 
 \section{Skills}
-Languages:
-  Python, Golang, C, Javascript, Java, Kotlin, HTML/CSS, Scheme, LATEX, SQL, Robotics \\
+Technical:
+  Rust, Java, C, Python, SQL, LaTeX, Lisp \\
 Tools:
-  Docker, Ansible, PostgreSQL, Git, Linux, Bash, Vim, GDB, AWS, GCP \\
-Libraries/Frameworks:
-  Node, Meteor, Stripe, React, Redux, Express \\
-Human Languages:
-  English (native), Mandarin (fluent), French (proficient)
+  Vim, Git, Mercurial, Bash, Eclipse, IntelliJ \\
+Languages:
+  English (native), Korean (native), Spanish (elementary)
 
 
 \end{document}
