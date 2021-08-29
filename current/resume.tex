@@ -1,0 +1,150 @@
+% !TEX TS-program = xelatex
+
+\documentclass{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{sectsty, xcolor, hyperref, enumitem, titlesec, titling, fontspec}
+
+\newfontfamily{\FAFR}{Font Awesome 5 Free Regular}
+\def\faEmail{{\FAFR \symbol{"F0E0}}} % Email
+\def\faPhone{{\FAFR \symbol{"F095}}} % Phone
+\newfontfamily{\FAB}{Font Awesome 5 Brands Regular}
+\def\faLinkedin{{\FAB \symbol{"F08C}}} % Linkedin
+\def\faGithub{{\FAB \symbol{"F09B}}} % Github
+
+\setmainfont{Poppins}
+\pagenumbering{gobble}
+\linespread{1.1}
+
+\definecolor{titlecolor}{RGB}{164,135,102} % #a48766
+\sectionfont{\color{titlecolor}}
+
+\definecolor{subtitlecolor}{RGB}{76,63,56} % #4c3f38
+\subsectionfont{\color{subtitlecolor}}
+
+\titlespacing*{\section}{0pt}{5pt}{2pt}
+\titlespacing*{\subsection}{0pt}{3pt}{0pt}
+
+\titleformat{\section}
+{\bfseries\color{titlecolor}\large}{}{0em}{}
+\titleformat{\subsection}[runin]
+{\bfseries\color{subtitlecolor}}{}{0em}{}
+
+\setlist{leftmargin=1.5em}
+\renewcommand\labelitemi{-}
+\let\olditemize=\itemize \let\endolditemize=\enditemize
+\renewenvironment{itemize}{\olditemize[topsep=0em] \itemsep-.3em}{\endolditemize}
+
+\newcommand{\link}[1]{\href{https://#1}{#1}}
+\newcommand{\entry}[3]{\quad\textbf{#1}\\#2\qquad#3}
+
+\renewcommand{\maketitle}{
+  \begin{flushleft}
+    \Huge\bfseries\theauthor
+  \end{flushleft}
+  \begin{bfseries}
+    \faEmail    \hspace{1pt} \href{mailto:richardh@berkeley.edu}{richardh@berkeley.edu} \quad
+    \faPhone    \hspace{1pt} (408) 888-6082 \quad
+    \faLinkedin \hspace{1pt} \link{linkedin.com/in/aeolyus} \quad
+    \faGithub   \hspace{1pt} \link{github.com/aeolyus}
+  \end{bfseries}
+}
+
+
+\begin{document}
+\author{\color{titlecolor}Richard Huang}
+\maketitle
+
+
+\section{Education}
+\subsection{University of California, Berkeley}
+\entry{Computer Science BA}{Aug 2018 - Dec 2020}{3.84 GPA}\\
+Extracurricular:
+  Upsilon Pi Epsilon (UPE) Computer Science Honor Society,
+  Open Computing Facility (OCF) Staff\\
+Coursework:
+  Algorithms,
+  Data Structures,
+  Machine Structures,
+  Operating Systems,
+  Database Systems,
+  Networking,
+  Security,
+  AI, Discrete Math,
+  Probability Theory
+
+
+\section{Experience}
+
+\subsection{Production Engineer Intern}
+\entry{Facebook}{Jun 2020 - Aug 2020}{Menlo Park, CA}
+\begin{itemize}
+  \item Built a stream processing pipeline test framework with a new Python -> IR Language -> Stylus C++ stack
+  \item Implemented Python -> C++ compiler for complex and native static expressions for new pipeline stack
+  \item Fixed a 3 month issue with TestSlide on migrating the codebase to a newer version
+\end{itemize}
+
+\subsection{Software Engineer Intern}
+\entry{8th Wall}{May 2019 - Aug 2019}{Palo Alto, CA}
+\begin{itemize}
+  \item Constructed new sign up flow for new console account system using
+    React, Redux, Express, AWS Cognito
+  \item Programmed contract automation using Javascript, PostgreSQL, Stripe
+  \item Automated application billing and upgrading
+\end{itemize}
+
+\subsection{Linux System Administrator ISG}
+\entry{UC Berkeley}{Oct 2018 - Jan 2020}{Berkeley, CA}
+\begin{itemize}
+  \item Mass deployed a custom Unix OS onto hive of 100+ computers in Berkeley labs
+  \item Prevented storage overload bug that would have caused system-wide crash
+  \item Hosted and ran annual ACM International Collegiate Programming Contest
+\end{itemize}
+
+
+\section{Projects}
+
+\subsection{Homelab}
+\entry{\link{aeoly.us/s/homelab}}{Neverending}{Golang, Docker, Ansible}
+\begin{itemize}
+  \item Wrote a modular machine-agnostic script that sets up my homelab infrastructure with a single command
+  \item Self-hosted web server, media server, DNS sinkhole, password manager, file-hosting, monitoring system, Minecraft server, virtualization hypervisor
+  \item Shortlinks powered by \link{gull.ml}, my simple modern URL shortener written in Go
+\end{itemize}
+
+\subsection{Alexa Skills Developer}
+\entry{}{Dec 2017}{Node.js, AWS, Lambda}
+\begin{itemize}
+  \item Developed 11 Alexa skills using Node.js and AWS Lambda with 7000+ unique users
+  \item Tells users interesting random facts about the topic asked
+\end{itemize}
+
+\subsection{Cougle}
+\entry{\link{cougle.ml}}{Feb 2018}{PHP, HTML, CSS, Linux}
+\begin{itemize}
+  \item Created an online anonymous peer-counseling forum with 300+ users to assist
+    students in a high school with a 4:3000+ counselor to student ratio
+  \item Demonstrated to and inspired school district board members to create an
+    advice forum at our school
+\end{itemize}
+
+\subsection{EVSD Web App}
+\entry{\link{evsd.club}}{May 2016 - May 2018}{Meteor.js, MongoDB, Linux}
+\begin{itemize}
+  \item Developed a web app that handles all logistics, 400+ users, member balances,
+    \$60k+year, tournaments
+  \item Responsible for server upkeep, configuration, and reliable operation
+\end{itemize}
+
+
+\section{Skills}
+Languages:
+  Python, Golang, C, Javascript, Java, Kotlin, HTML/CSS, Scheme, LATEX, SQL, Robotics \\
+Tools:
+  Docker, Ansible, PostgreSQL, Git, Linux, Bash, Vim, GDB, AWS, GCP \\
+Libraries/Frameworks:
+  Node, Meteor, Stripe, React, Redux, Express \\
+Human Languages:
+  English (native), Mandarin (fluent), French (proficient)
+
+
+\end{document}
