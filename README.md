@@ -1,7 +1,7 @@
-# Resume
+# resume
 my resume teehee
 
-## Usage
+## usage
 feel free to use your favorite editor and LaTeX compiler :>
 
 ``` sh
