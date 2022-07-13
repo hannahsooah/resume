@@ -33,7 +33,7 @@
 \renewenvironment{itemize}{\olditemize[topsep=0em] \itemsep-.3em}{\endolditemize}
 
 \newcommand{\link}[1]{\href{https://#1}{#1}}
-\newcommand{\entry}[3]{\quad\textbf{#1}\\#2\qquad#3}
+\newcommand{\entry}[3]{\quad\textbf{|\quad#1}\\#2\qquad#3}
 
 \renewcommand{\maketitle}{
   \begin{flushleft}
@@ -54,8 +54,8 @@
 
 
 \section{Education}
-\subsection{University of California, Berkeley}
-\entry{Electrical Engineering and Computer Science, BS}{Aug 2020 - May 2023}\\
+\subsection{University of California, Berkeley}\quad\textbf{Electrical Engineering and Computer Science, BS}\\
+{Aug 2020 - May 2023}\\
 Coursework:
   Operating Systems,
   Algorithms,
@@ -70,19 +70,28 @@ Coursework:
 
 \section{Experience}
 
+\subsection{Software Engineer Intern}
+\entry{Meta}{Jun 2022 - Aug 2022}{New York City, NY}
+\begin{itemize}
+  \item Created a debug adapter server for command line debuggers to communicate using Debug Adapter Protol
+  \item Refactored a VSCode extension to launch record-and-replay debug sessions in the IDE's debugging UI
+  \item Multithreaded the server to enhance performance and manage multiple streams of input independently
+  \item Integrated the product with existing tooling and enabled multiple launch methods for various use cases
+\end{itemize}
+
 \subsection{Production Engineer Intern}
-\entry{Facebook}{Jun 2021 - Aug 2021}{Menlo Park, CA (Remote)}
+\entry{Meta}{Jun 2021 - Aug 2021}{Menlo Park, CA (Remote)}
 \begin{itemize}
   \item Implemented relative computing resource units for future use in server inventory management systems
   \item Refactored scheduler to be cross-compatible with capacity requests of different resource types
-  \item Created alerts and detectors to monitor invalid resource configurations
+  \item Enabled logging and created alerts and detectors to monitor invalid resource configurations
 \end{itemize}
 
 \subsection{Academic Course Staff}
-\entry{UC Berkeley EECS Department}{Jan 2021 - Current}{Berkeley, CA}
+\entry{UC Berkeley EECS Department}{Jan 2021 - May 2022}{Berkeley, CA}
 \begin{itemize}
-  \item Reinforce student knowledge of machine architecture, high-level language support, and operating systems (I/O, interrupts, memory management, process switching) as a member of course staff
-  \item Led weekly reviews for students; focus on conceptual application through projects, homework, and labs
+  \item Led weekly reviews to reinforce student knowledge of machine architecture, high-level language support, and operating systems (I/O, interrupts, memory management, process switching)
+  \item Aided students in conceptual application through projects, homework, and labs
 \end{itemize}
 
 
@@ -92,7 +101,7 @@ Coursework:
 \begin{itemize}
   \item Created an automatic cloud deployment of AWS OpenSearch, using its REST API for queries and uploads
   \item Developed a scalable search endpoint used in workflows in AMP for clients to handle large number of nodes
-  \item Implemented a front end to input EntitySearch queries and display results using React and Springboot
+  %\item Implemented a front end to input EntitySearch queries and display results using React and Springboot
 \end{itemize}
 
 \subsection{NumC}\quad{April 2021}
@@ -112,7 +121,7 @@ Coursework:
 \subsection{Classify}\quad{Feb 2021}
 \begin{itemize}
   \item Wrote RISC-V assembly code to run a simple Artificial Neural Network (ANN) on a RISC-V simulator
-  \item Implemented basic operations including vector dot product and matrix multiplication using assembly code
+  %\item Implemented basic operations including vector dot product and matrix multiplication using assembly code
   \item Loaded a pretrained ANN and executed it to classify handwritten digits from the MNIST benchmark set
 \end{itemize}
 
@@ -128,17 +137,17 @@ Coursework:
   %\item Added multiplayer compatibilities to race friends and professors
 %\end{itemize}
 
-\section{Awards}
-{Presidential Scholars Program Nominee, Jan 2020}\quad\quad{National Merit Scholarship, Feb 2020} \\
-{The President’s Volunteer Service Award, Nov 2019}\quad\quad{FUHSD Community Service Award, May 2020}
+%\section{Awards}
+%{Presidential Scholars Program Nominee, Jan 2020}\quad\quad{National Merit Scholarship, Feb 2020} \\
+%{The President’s Volunteer Service Award, Nov 2019}\quad\quad{FUHSD Community Service Award, May 2020}
 
 \section{Skills}
-Technical:
+Languages:
   Rust, Java, C, Python, RISC-V, SQL, LaTeX, Lisp, React\\
 Tools:
-  Vim, Git, Mercurial, Terraform, Bash, Eclipse, IntelliJ, Spring Boot \\
-Languages:
-  English (native), Korean (native), Spanish (elementary)
+  Neovim, Git, Mercurial, Terraform, VSCode, IntelliJ, Bash, Eclipse\\
+%Languages:
+  %English (native), Korean (native), Spanish (elementary)
 
 
 \end{document}
