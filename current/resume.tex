@@ -13,7 +13,7 @@
 
 \setmainfont{Poppins}
 \pagenumbering{gobble}
-\linespread{1.1}
+\linespread{1.2}
 
 \definecolor{titlecolor}{RGB}{56,140,236} % #388cec
 \sectionfont{\color{titlecolor}}
@@ -54,14 +54,14 @@
 
 
 \section{Education}
-\subsection{University of California, Berkeley}\quad\textbf{Electrical Engineering and Computer Science, BS}\\
-{Aug 2020 - Dec 2023}\\
+\subsection{University of California, Berkeley}\quad\textbf{Electrical Engineering and Computer Science, BS}\quad
+{(Aug 2020 - Dec 2023)}\\
 Coursework:
   Operating Systems,
   Algorithms,
   Data Structures,
   Internet Protocols,
-  Computer Security,
+  Computer Security, \\
   Communication Networks,
   Machine Structures,
   Database Systems,
@@ -73,16 +73,26 @@ Coursework:
 
 \section{Experience}
 
-\subsection{Software Engineer Intern}
+\subsection{Software Engineer Intern (Analytics Platform)}
+\entry{Addepar}{May 2023 - Aug 2023}{Mountain View, CA}
+\begin{itemize}
+  %\item Initiated conversations with finance and client solutions teams to identify a manual workflow to automate
+  \item Automated a workflow by using Java and Python to classify assets and perform billing calculations
+  \item Implemented a client-facing full-stack solution using Snowflake API to pipeline data to Looker dashboards
+  \item Tested SQL database migrations on AWS EC2 instances using Jenkins to deploy to Kubernetes Comet pods
+
+\end{itemize}
+
+\subsection{Software Engineer Intern (DevTool Development)}
 \entry{Meta}{May 2022 - Aug 2022}{New York City, NY}
 \begin{itemize}
   \item Built a debug adapter for command line debuggers to communicate using Debug Adapter Protocol
-  \item Refactored a VSCode extension to launch record-and-replay debug sessions in the IDE's debugging UI
+  \item Enhanced a VSCode extension to launch record-and-replay debug sessions in the IDE's debugging UI
   \item Multithreaded the server to enhance performance and manage multiple streams of input independently
   \item Integrated the product with existing tooling and enabled multiple launch methods for various use cases
 \end{itemize}
 
-\subsection{Production Engineer Intern}
+\subsection{Production Engineer Intern (IaaS Team)}
 \entry{Meta}{Jun 2021 - Aug 2021}{Menlo Park, CA (Remote)}
 \begin{itemize}
   \item Implemented relative computing resource units for future use in server inventory management systems
@@ -131,13 +141,13 @@ Coursework:
   \item Achieved 90x speedup for matrix multiplication and 1000x speedup for matrix powering
 \end{itemize}
 
-\subsection{Gitlet}\quad{Mar 2021}
-\begin{itemize}
-  \item Built a custom version control system in Java from scratch, mimicking git
-  \item Created a design doc with data structures, algorithms, and persistence for clear documentation
-  \item Wrote a breadth-first search algorithm to detect split points in commit history for correct branch merging
-  \item Functionality includes init, add, commit, rm, log, global-log, find, status, checkout, branch, merge, reset, etc.
-\end{itemize}
+%\subsection{Gitlet}\quad{Mar 2021}
+%\begin{itemize}
+%  \item Built a custom version control system in Java from scratch, mimicking git
+%  \item Created a design doc with data structures, algorithms, and persistence for clear documentation
+%  %\item Wrote a breadth-first search algorithm to detect split points in commit history for correct branch merging
+%  \item Functionality includes init, add, commit, rm, log, global-log, find, status, checkout, branch, merge, reset, etc.
+%\end{itemize}
 
 \subsection{Classify}\quad{Feb 2021}
 \begin{itemize}
@@ -145,11 +155,12 @@ Coursework:
   \item Implemented basic operations including vector dot product and matrix multiplication using assembly code
   \item Loaded a pretrained ANN and executed it to classify handwritten digits from the MNIST benchmark set
 \end{itemize}
-\subsection{Lisp Dialect Interpreter}\quad{Nov 2020}
-\begin{itemize}
-  \item Wrote a recursive interpreter and tokenizer for a List dialect using Python
-  \item Created the REPL to evaluate expressions and implemented tail recursion to optimize recursion
-\end{itemize}
+
+%\subsection{Lisp Dialect Interpreter}\quad{Nov 2020}
+%\begin{itemize}
+%  \item Wrote a recursive interpreter and tokenizer for a List dialect using Python
+%  \item Created the REPL to evaluate expressions and implemented tail recursion to optimize recursion
+%\end{itemize}
 
 %\subsection{Autocorrected Typing Software}\quad{Sept 2020}
 %\begin{itemize}
@@ -163,9 +174,9 @@ Coursework:
 
 \section{Skills}
 Languages:
-  Rust, Java, C, Python, RISC-V, SQL, LaTeX, Go, C++, Lisp, React\\
+  Rust, Python, Java, C, RISC-V, SQL, LaTeX, Go, C++, React\\
 Tools:
-  Neovim, Git, Mercurial, Make, Terraform, VSCode, IntelliJ, Bash, Eclipse\\
+  Neovim, Git, Mercurial, Comet, Snowflake, Jenkins, Make, Terraform, VSCode, IntelliJ\\
 %Languages:
   %English (native), Korean (native), Spanish (elementary)
 
